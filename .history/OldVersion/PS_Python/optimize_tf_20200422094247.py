@@ -1,7 +1,5 @@
 import numpy as np
-# import tensorflow as tf
-import tensorflow.compat.v1 as tf
-tf.disable_v2_behavior()
+import tensorflow as tf
 
 def determine_shock(list:'1d list'):
     len_2=len(list)//2
@@ -30,9 +28,10 @@ def optimize_pq(mesh_q: '2d np.array',
         mesh_p = np.zeros_like(mesh_q)
     mesh_p_ = np.zeros_like(mesh_q)
     mesh_q_ = np.zeros_like(mesh_q)
-    a_errpq = tf.placeholder(dtype=tf.float64,shape=None, name="a_errpq")
-    a_l2p = tf.placeholder(dtype=tf.float64,shape=None, name="a_l2p")
-    a_l2q = tf.placeholder(dtype=tf.float64,shape=None, name="a_l2q")
+    a_errpq = tf.compat.v1.placeholder(dtype=tf.float64,shape=None, name="a_errpq")
+    a_l2p = tf.compat.v1.placeholder(dtype=tf.float64,shape=None, name="a_l2p")
+    a_l2q = tf.compat.v1.placeholder(
+        dtype=tf.float64, shape=None, name="a_l2q")
     P = tf.constant(mesh_p, name="P")
     Q = tf.constant(mesh_q, name="Q")
     P_ = tf.Variable(P, name="P_")

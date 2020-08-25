@@ -1,7 +1,5 @@
 import numpy as np
-# import tensorflow as tf
-import tensorflow.compat.v1 as tf
-tf.disable_v2_behavior()
+import tensorflow as tf
 
 def determine_shock(list:'1d list'):
     len_2=len(list)//2

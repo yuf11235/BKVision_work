@@ -15,7 +15,7 @@ mesh_x, mesh_y, mesh_z, mesh_nx, mesh_ny, mesh_nz, mesh_zdx, mesh_zdy\
 ## plot simulate shape
 fig = plt.figure()
 ax = fig.gca(projection='3d', adjustable='box')
-# ax.set_aspect('equal')
+ax.set_aspect('equal')
 # ax = Axes3D(fig)
 # surf = ax.plot_surface(mesh_x, mesh_y, mesh_z, linestyles = 'solid',linewidth=0 ,edgecolor = 'white', cmap = plt.get_cmap('gray'), antialiased=False)
 # surf = ax.plot_surface(mesh_x, mesh_y, mesh_z, linestyles = 'solid',linewidth=0 ,edgecolor = 'white', color = 'gray'  )#,cmap = plt.get_cmap('gray')

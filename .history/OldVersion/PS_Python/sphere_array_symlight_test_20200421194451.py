@@ -19,7 +19,7 @@ array_mesh_x, array_mesh_y, array_mesh_z, array_mesh_nx, array_mesh_ny, array_me
 ### plot simulate shape
 fig = plt.figure()
 ax = fig.gca(projection='3d', adjustable='box')
-# ax.set_aspect('equal')
+ax.set_aspect('equal')
 # ax = Axes3D(fig)
 wireframe = ax.plot_wireframe(array_mesh_x[::2,::2], array_mesh_y[::2,::2], array_mesh_z[::2,::2],
                               rstride=1, cstride=1, linestyles = 'solid',linewidth=0.1 ,edgecolor = 'gray')
